@@ -23,22 +23,18 @@
                     </ul>
                     <div class="subheading mb-3">Workflow</div>
                     <ul class="fa-ul mb-0">
+                        {% for skill in skills %}
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
+                            {{skill.workflow}}
+                           
+                
                         </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
+                        {% endfor  %}
+                        
+                        
+                       
+                      
                     </ul>
                 </div>
             </section>

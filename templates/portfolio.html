@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Interests-->
+<section class="resume-section " id="interests">
+    <div class="resume-section-content  ">
+        <h2 class="mb-5">Portfolio</h2>
+
+
+       {% for portfolio in portfolios %}
+
+        <div class="d-flex flex-column flex-md-row justify-content-between mb-5   " >
+
+            
+            <div class="flex-grow-1   ">
+                <div class="mb-0 mw-25"style="width: 18rem;   ">
+                    <h4 class="mb-0">{{portfolio.project_name}} </h4>
+                    <!---->
+                    <img src="{{portfolio.imageURL}}" class="card-img-top  mb-3"  >
+                    
+                    
+                    <div class=" mb-3">
+                      <p class=" mb-3">{{portfolio.description}}</p>
+                    </div>
+                </div>
+            </div>
+           
+           
+           
+        </div>
+
+        {% endfor %}
+
+        
+       
+       
+    </div>
+</section>
+<hr class="m-0" />
+
+{% endblock content %}  
